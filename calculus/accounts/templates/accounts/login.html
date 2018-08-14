@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'accounts/style.css' %}">
+<div class="container">
+{% block body  %}
+  <h1>Welcome!</h1>
+  <p>You can login here </p>
+<form method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <button type="submit"value="Login">Sign In</button>
+  {% endblock %}
+</form>
+</div>

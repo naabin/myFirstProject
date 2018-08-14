@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load static %}
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Table Of Integrals</title>
+    <link rel="stylesheet" href="{% static 'TableOfIntegrals'%}">
+  </head>
+
+  <body>
+    {% block body %}
+    <div class="container">
+
+
+    <h1>Basic Integrals</h1>
+    <ul>
+      <li>$\displaystyle \large\int u^{x} du = \frac{x^{x+1}}{x+1}+ C, x\ne -1 $</li>
+      <li>$\displaystyle \large\int \frac{dx}{x} = \ln|x| + C $</li>
+      <li>$\displaystyle \large\int e^{x}dx = e^{x} + C $</li>
+      <li>$\displaystyle \large\int a^{x} du = \frac{a^x}{\ln x} + C $</li>
+      <li>$\displaystyle \large\int \sin x \ dx = -\cos x + C$</li>
+      <li>$\displaystyle \large\int \cos x \ dx = \sin x + C$</li>
+      <li>$\displaystyle \large\int sec^{2}x \ dx = \tan x + C $</li>
+      <li>$\displaystyle \large\int csc^{2} x \ dx = = - cot x + C $</li>
+      <li>$\displaystyle \large\int sec x \ tan x \ dx = sec x + C$</li>
+      <li>$\displaystyle \large\int csc x \ cot x \ dx = - csc x + C$</li>
+      <li>$\displaystyle \large\int tan x \ dx = \ln|sec x| + C$</li>
+      <li>$\displaystyle \large\int cot x \ dx = \ln|sin x| + C $</li>
+      <li>$\displaystyle \large\int sec x \ dx = \ln|sec x + tan x|+ C$</li>
+      <li>$\displaystyle \large\int csc x \ dx = \ln|csc x - cot x |+ C$</li>
+      <li>$\displaystyle \large\int \frac{dx}{\sqrt{a^{2}-x^{2}}} = \sin^{1}\frac{x}{a} + C$</li>
+      <li>$\displaystyle \large\int \frac{dx}{a^{2} + x^{2}} = \frac{1}{a}tan^{-1}\frac{x}{a} +C$</li>
+      <li>$\displaystyle \large\int \frac{dx}{x\sqrt{x^{2}- a^{2}}} = \frac{1}{a}sec^{-1}\frac{x}{a} + C$</li>
+
+    </ul>
+    <h1> Trignometric Integrals</h1>
+    <ul>
+      <li>$\displaystyle \large\int sin^{2} x \ dx = \frac{1}{2}x - \frac{1}{4}sin2x +C $</li>
+      <li>$\displaystyle \large\int cos^{2} x \ dx  = \frac{1}{2}x + \frac{1}{4}sin2x + C$</li>
+      <li>$\displaystyle \large\int tan^2{x} \ dx = tan x - x + C$</li>
+      <li>$\displaystyle \large\int cot^2{x} \ dx = -cot x - x + C $</li>
+      <li>$\displaystyle \large\int sin^{3} x \ dx = - \frac{1}{3}\Big(2 + sin^{2} x\Big)cos x + C$</li>
+      <li>$\displaystyle \large\int cos^{3} x \ dx = \frac{1}{3}\Big(2 + sin^2 x\Big)sin x + C$</li>
+      <li>$\displaystyle \large\int tan^{3} x \ dx = \frac{1}{2}tan^2{x} + ln|cos x| + C$</li>
+      <li>$\displaystyle \large\int cot^{3} x \ dx = - \frac{1}{2}cot^{2}x - ln|sin x| + C$</li>
+      <li>$\displaystyle \large\int sec^{3} x \ dx = \frac{1}{2}sec x \ tan x + \frac{1}{2}ln|sec x + tan x | + C$</li>
+      <li>$\displaystyle \large\int csc^{3} x \ dx = - \frac{1}{2} csc x \ cot x + \frac{1}{2}ln|csc x - cot x| +C $</li>
+      <li>$\displaystyle \large\int sin^{n} x \ dx = - \ frac{1}{n}sin^{n-1} x \ cos x + \frac{n-1}{n}\displaystyle \int sin^{n-2} dx + C $</li>
+      <li>$\displaystyle \large\int cos^{n} x \ dx = \frac{1}{n}cos^{n-1} x \ sin x + \frac{n-1}{n}\displaystyle \int cos^{n-2} dx + C $</li>
+      <li>$\displaystyle \large\int tan^{n} x \ dx = \frac{1}{n-1}tan^{n-1} x - \displaystyle \int tan^{n-2} x dx + C $</li>
+      <li>$\displaystyle \large\int cot^{n} x \ dx = \frac{-1}{n-1}cot^{n-1} x - \displaystyle \int cot^{n-2} dx + C $</li>
+      <li>$\displaystyle \large\int sec^{n} x \ dx = \frac{1}{n-1}tan x \ sec^{n-2} x + \frac{n-2}{n-1}\displaystyle \int csc^{n-2} dx + C$</li>
+      <li>$\displaystyle \large\int csc^{n} x \ dx = \frac{-1}{n-1}cot x \ csc^{n-2} x + \frac{n-2}{n-1}\displaystyle \int csc^{n-2} dx + C $</li>
+      <li>$\displaystyle \large\int sin \ ax \ sin  \ bx  \ dx = \frac{sin\big(a - b\big)x}{2\big(a-b\big)} - \frac{sin\big(a+b\big)x}{2\big(a+b\big)} + c$</li>
+      <li>$\displaystyle \large\int cos  \ ax \ cos  \ bs \ dx = \frac{sin\big(a-b\big)x}{2\big(a-b\big)} + \frac{sin\big(a+ b\big)x}{2\big(a+b\big)} + C $</li>
+      <li>$\displaystyle \large\int sin \ ax cos \ bx \ dx = -\frac{cos\big(a - b\big)x}{2\big(a - b\big)} - \frac{cos\big(a + b\big)x}{2\big(a + b\big)} + C$</li>
+      <li>$\displaystyle \large\int x \ sin x \ dx = sin x - x \ cos x + C$</li>
+      <li>$\displaystyle \large\int x \ cos x \ dx  = cos x + sin x + C$</li>
+      <li>$\displaystyle \large\int x^{n} sin x \ dx = -x^{n} cos x + n\displaystyle \int x^{n-1} \ cos x \ dx + C$</li>
+      <li>$\displaystyle \large\int x^{n} cos x \ dx = x^{n} sin x - n \displaystyle \int x^{n-1} \ sin x \ dx + C$</li>
+      <li>$\displaystyle \large\int sin^{n} x \ cos^{m} x \ dx = -\frac{sin^{n-1} x\ cos^{m + 1} x }{n + m} +\frac{n-1}{n + m}\displaystyle\int sin^{n-2}x  \ cos^{m}x \ dx
+        \\\large = \displaystyle\frac{sin^{n+1}x \ cos^{m-1} x}{n + m}+\frac{m-1}{n + m}\displaystyle \int sin^n x \ cos^{m-2} x \ dx  + C$</li>
+
+    </ul>
+    <h1> Exponential and Logarithmic Integrals</h1>
+    <u1>
+      <li>$\displaystyle\large\int x e^{ax} \ dx  = \frac{1}{a^{2}}[ax - 1]e^{ax}  + C $</li>
+      <li>$\displaystyle\large\int x^{n} \ e^{ax} \ dx = \frac{1}{a}x^{n}e^{ax} - \frac{n}{a}\displaystyle\int x^{n-1} \  e^{ax} \ dx + C $</li>
+      <li>$\displaystyle\large\int e^{ax} \ sin \ bx  \ dx = \frac{e^{ax}}{a^{2} + b^{2}} \displaystyle[a \ sin \ bx - b \ cos \ bx] + C $</li>
+      <li>$\displaystyle \large\int e^{ax} \ cos \ bx \ dx = \frac{e^{ax}}{a^{2} + b^{2}} \displaystyle[a \ cos \ bx \ + b \ sin \ bx] + C$</li>
+      <li>$\displaystyle \large\int ln x \ dx = x \ ln x - x + C $</li>
+      <li>$\displaystyle \large\int x^{n} \ ln x \ dx = \frac{x^{n+1}}{[u + 1]^{2}}\displaystyle([n+1]ln x - 1) + C $</li>
+      <li>$\displaystyle \large\int \frac{1}{x \ ln x} \ dx = ln|ln x| + C$</li>
+
+    </ul>
+    <h1> Hyperbolic Integrals</h1>
+    <ul>
+      <li>$\displaystyle\large\int sinh \ x \ dx  = cosh \ x + C$</li>
+      <li>$\displaystyle\large\int cosh \ x \ dx  = sinh \ x + C$</li>
+      <li>$\displaystyle \large\int tanh \ x \ dx = ln|cosh \ x| + C$</li>
+      <li>$\displaystyle \large\int coth \ x \ dx = ln|sinh \ x| + C$</li>
+      <li>$\displaystyle \large\int sech \ x \ dx = tan^{-1}|sinh \ x| + C$</li>
+      <li>$\displaystyle \large\int csch \ x \ dx = ln|tanh\frac{1}{2}x| + C$</li>
+      <li>$\displaystyle \large\int sech^{2} \ x \ dx = tanh \ x + C$</li>
+      <li>$\displaystyle \large\int csch^{2} \ x \ dx  = -coth \ x \ + C$</li>
+      <li>$\displaystyle \large\int sech \ x \ tanh \ x \ dx = -sech \ x + C$</li>
+      <li>$\displaystyle \large\int csch \ x  \ coth \ x \ dx = -csch \ x + C$</li>
+      </ul>
+      <h1> Inverse Trignometric Integrals</h1>
+      <ul>
+        <li>$\displaystyle\large\int \arcsin \ x  \ dx = x \ \arcsin \ x + \sqrt{1 - x^{2}} + C$</li>
+        <li>$\displaystyle \large\int \arccos \ x \ dx = x \ \arccos x - \sqrt{1-x^{2}}+ C$</li>
+        <li>$\displaystyle \large\int \arctan \ x \ dx = x \ \arctan x - \frac{1}{2}ln\Big[1 + x^{2}\Big] + C$</li>
+        <li>$\displaystyle \large\int x \ \arcsin \ x \ dx = \frac{2x^{2}-1}{4}\arcsin \ x + \frac{x\sqrt{1-x^{2}}}{4}+C$</li>
+        <li>$\displaystyle \large\int x \ \arccos \ x \ dx = \frac{2x^{2}-1}{4}\arccos \ x - \frac{x\sqrt{1-x^{2}}}{4}+C$</li>
+        <li>$\displaystyle \large\int x \arctan \ x \ dx  = \frac{x^2 + 1}{2}\arctan \ x - \frac{x}{2} +C$</li>
+        <li>$\displaystyle \large\int x^{n}\ \arcsin \ x\ dx = \frac{1}{n+1}\displaystyle\Bigg[x^{n+1}\ \arcsin\ x - \displaystyle
+          \int \frac{x^{n+1}}{\sqrt{1 - x^{2}}}\Bigg],n\ne -1$</li>
+        <li>$\displaystyle \large\int x^{n}\ \arccos \ x\ dx = \frac{1}{n+1}\displaystyle\Bigg[x^{n+1}\ \arccos\ x + \displaystyle
+          \int \frac{x^{n+1}}{\sqrt{1 - x^{2}}}\Bigg],n\ne -1$</li>
+
+      </ul>
+      <h1>Integrals Involving $a^{2} + x^{2}, a > 0$</h1>
+      <ul>
+      <li>$\displaystyle \large\int \sqrt{a^{2} + x^{2}}\ dx = \displaystyle \frac{x}{2}\sqrt{a^{2}+x^{2}}+\frac{a^{2}}{2}
+        \ln$</li>
+      <li>$\displaystyle \large\int x^{2}\sqrt{a^{2}+ x^{2}}\ dx = \frac{x}{8}\big(a^{2} + 2x^{2}\big)\sqrt{a^{2}+x^{2}}-\frac{a^{4}}{8}
+        ln\Big(x+\sqrt{a^{2}+x^{2}}\Big)+C$</li>
+      <li>$\displaystyle\large\int \frac{\sqrt{a^{2}+x^{2}}}{x}\ dx = \sqrt{a^{2}+x^{2}}-a\ \ln\Bigg|\frac{a +\sqrt{a^{2}+x^{2}}}{x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{\sqrt{a^{2}+x^{2}}}{x^{2}}\ dx = - \frac{\sqrt{a^{2}+x^{2}}}{x} + \ln\Big(x + \sqrt{a^{2}+x^{2}}\Big)+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\sqrt{a^{2}+x^{2}}}=\ln\Big(x+\sqrt{a^{2}+x^{2}}\Big)+C$</li>
+      <li>$\displaystyle\large\int \frac{x^{2}}{\sqrt{a^{2}+x^{2}}}\ dx = \frac{x}{2}\Big(\sqrt{a^{2}+x^{2}}\Big)-\frac{a^{2}}{2}
+        \ln \Big(x+\sqrt{a^{2}+x^{2}}\Big)+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x\sqrt{a^{2}+x^{2}}}=-\frac{1}{a}\ln\Bigg|\frac{\sqrt{a^{2}+x^{2}}+a}{x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x^{2}\sqrt{a^{2}+x^{2}}}=-\frac{\sqrt{a^{2}+x^{2}}}{a^{2}\ x}+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\displaystyle\big(a^{2}+x^{2}\big)^{\frac{3}{2}}}=\frac{x}{a^{2}\sqrt{a^{2}+x^{2}}}+C$</li>
+    </ul>
+    <h1>Integrals Involving $x^{2}-a^{2},a>0$</h1>
+    <ul>
+      <li>$\displaystyle\large\int\sqrt{x^{2}-a^{2}}\ dx=\frac{x}{2}\sqrt{x^{2}-a^{2}}-\frac{a^{2}}{2}\ln\Big|x+\sqrt{x^{2}-a^{2}}\Big|+C$</li>
+      <li>$\displaystyle\large\int x^{2}\sqrt{x^{2}-a^{2}}\ dx = \frac{x}{8}\Big(2x^{2}-a^{2}\Big)\sqrt{x^{2}-a^{2}}-\frac{a^{4}}{8}
+        \ln\Big|x+\sqrt{x^{2}-a^{2}}+C$</li>
+      <li>$\displaystyle\large\int\frac{\sqrt{x^{2}-a^{2}}}{x}\ dx=\sqrt{x^{2}-a^{2}}-a\ \arccos\frac{a}{|x|}+C$</li>
+      <li>$\displaystyle\large\int\frac{\sqrt{x^{2}-a^{2}}}{x^{2}}\ dx=-\frac{\sqrt{x^{2}-a^{2}}}{x}+\ln\Big|x+\sqrt{x^{2}-a^{2}}\Big|+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\sqrt{x^{2}-a^{2}}}=\ln\Big|x+\sqrt{x^{2}-a^{2}}\Big|+C$</li>
+      <li>$\displaystyle\large\int\frac{x^{2}\ dx}{\sqrt{x^{2}-a^{2}}}=\frac{x}{2}\sqrt{x^{2}-a^{2}}+\frac{a^{2}}{2}
+        \ln\Big|x+\sqrt{x^{2}-a^{2}}\Big|+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x^{2}\sqrt{x^{2}-a^{2}}}=\frac{\sqrt{x^{2}-a^{2}}}{a^{2}\ x}+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\big(x^{2}-a^{2}\big)^{\frac{3}{2}}}=-\frac{x}{a^{2}\sqrt{x^{2}-a^{2}}}$</li>
+    </ul>
+    <h1>Integrals Involving $a^{2}-x^{2},a>0$</h1>
+    <ul>
+      <li>$\displaystyle\large\int\sqrt{a^{2}-x^{2}}\ dx = \frac{x}{2}\sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2}\arcsin\frac{x}{a}+C$</li>
+      <li>$\displaystyle\large\int x^{2}\sqrt{a^{2}-x^{2}}\ dx=\frac{x}{8}\big(2x^{2}-a^{2}\big)\sqrt{a^{2}-x^{2}}
+        +\frac{a^{4}}{8}\arcsin\frac{x}{a}+C$</li>
+      <li>$\displaystyle\large\int\frac{\sqrt{a^{2}-x^{2}}}{x}\ dx=\sqrt{a^{2}-x^{2}}-a\ \ln\Bigg|\frac{a+\sqrt{a^{2}-x^{2}}}
+        {x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{\sqrt{a^{2}-x^{2}}}{x^{2}}\ dx=-\frac{1}{x}\sqrt{a^{2}-x^{2}}-\arcsin\frac{x}{a}+C $</li>
+      <li>$\displaystyle\large\int\frac{x^{2}\ dx}{\sqrt{a^{2}-x^{2}}}=-\sqrt{a^{2}-x^{2}}+\frac{a^{2}}{2}\arcsin\frac{x}{a}+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x\sqrt{a^{2}-x^{2}}}=-\frac{1}{a}\ln\Bigg|\frac{a+\sqrt{a^{2}-x^{2}}}{x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x^{2}\sqrt{a^{2}-x^{2}}}=-\frac{1}{a^{2}x}\sqrt{a^{2}-x^{2}}+C$</li>
+      <li>$\displaystyle\large\int\big(a^{2}-x^{2}\big)^\frac{3}{2} dx=-\frac{x}{8}\frac(2x^{2}-5a^{2}\big)
+        \sqrt{a^{2}-x^{2}}+\frac{3a^{4}}{8}\arcsin\frac{x}{a}+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\big(a^{2}-x^{2})^{\frac{3}{2}}}=-\frac{x}{a^{2}\sqrt{a^{2}-x^{2}}}+C$</li>
+    </ul>
+    <h1>Integrals Involving $2au-u^{2},a>0$</h1>
+    <ul>
+      <li>$\displaystyle\large\int\sqrt{2ax - x^{2}}\ dx =\frac{x-a}{2}\sqrt{2ax-x^{2}}+\frac{a^{2}}{2}
+        \arccos\Bigg(\frac{a-x}{a}\Bigg)+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{\sqrt{2ax-x^{2}}}=\arccos\Bigg(\frac{a-x}{a}\Bigg)+C$</li>
+      <li>$\displaystyle\large\int x\sqrt{2ax-x^{2}}\ dx=\frac{2x^{2}-ax-3a^{2}}{6}\sqrt{2ax-x^{2}}
+        +
+        \frac{a^{3}}{2}\arccos\Bigg(\frac{a-x}{a}\Bigg)+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x\sqrt{2ax-x^{2}}}=-\frac{\sqrt{2ax-x^{2}}}{ax}+C$</li>
+    </ul>
+    <h1>Integrals Involvig $a+bx,a\ne 0$</h1>
+    <ul>
+      <li>$\displaystyle\large\int\frac{x\ dx}{a+bx}=\frac{1}{b^{2}}\big(a + bx -a\ln\big|a+bx\big|\big)+C$</li>
+      <li>$\displaystyle\large\int\frac{x^{2}\ dx}{a+bx}=\frac{1}{2b^{3}}\Big[\big(a+bx\big)^{2}-4a(a+bx)+2a^{2}\ln|a+bx|\Big]+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x(a+bx)}=\frac{1}{a}\ln\Bigg|\frac{x}{a+bx}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x^{2}(a+bx)}=-\frac{1}{ax}+\frac{b}{a^{2}}\ln\Bigg|\frac{a+bx}{x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{x\ dx}{(a+bx)^{2}}=\frac{a}{b^{2}(a+bx)}+\frac{1}{b^{2}}\ln|a+bx|+C$</li>
+      <li>$\displaystyle\large\int\frac{x\ dx}{x(a+bx)^{2}}=\frac{1}{a(a+bx)}-\frac{1}{a^{2}}\ln\Bigg|\frac{a+bx}{x}\Bigg|+C$</li>
+      <li>$\displaystyle\large\int\frac{x^{2}}{(a+bx)^{2}}=\frac{1}{b^{3}}\Bigg(a+bx-\frac{a^{2}}{a+bx}-2a\ln|a+bx|\Bigg)+C$</li>
+      <li>$\displaystyle\large\int x\sqrt{a+bx}\ dx=\frac{2}{15b^{2}}(3bx-2a)(a+bx)^{\frac{3}{2}}+C$</li>
+      <li>$\displaystyle\large\int\frac{x\ dx}{\sqrt{a+bx}}=\frac{2}{3b^{2}}(bx-2a)\sqrt{a+bx}+C$</li>
+      <li>$\displaystyle\large\int\frac{x^{2}\ dx}{\sqrt{a+bx}}=\frac{2}{15b^{3}}\Bigg(8a^{2}+3b^{2}x^{2}-4abx\Bigg)\sqrt{a+bx}+C$</li>
+      <li>$\displaystyle\large\int\frac{dx}{x\sqrt{a+bx}}=\frac{1}{\sqrt{a}}\ln\Bigg|\frac{\sqrt{a+bx}-\sqrt{a}}
+        {\sqrt{a+bx}+\sqrt{a}}\Bigg|+C,if\ a > 0
+        \\\displaystyle\large =\frac{2}{\sqrt{-a}}\tan-1\sqrt{\frac{a+bx}{-a}}+C,if a< 0$</li>
+    </ul>
+    </div>
+  </body>
+  {% endblock %}
+</html>

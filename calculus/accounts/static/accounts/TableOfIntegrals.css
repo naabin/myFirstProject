@@ -1,0 +1,20 @@
+h1{
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+ul{
+  text-align:justify;
+  color: auto;
+}
+body{
+
+  color: #0c193a;
+  border: 20px solid #01061e;
+  border-bottom: 0px;
+  margin-bottom: : 0px;
+  border-radius: 30px;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+}

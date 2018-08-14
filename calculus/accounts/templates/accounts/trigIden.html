@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block body %}
+<body>
+  <div class="container">
+
+
+  <h1>TRIGONOMETRIC IDENTITIES</h1>
+  <h2>Reciprocal Identities</h2>
+  <ul>
+  <li>$\displaystyle\large \sin x = \frac{1}{\csc x}\ \ \ \  \csc x = \frac{1}{\sin x}  $</li>
+  <li>$\displaystyle\large \tan x = \frac{1}{\cot x}\ \ \ \  \cot x = \frac{1}{\tan x}$</li>
+  <li>$\displaystyle\large \cos x=\frac{1}{\sec x} \  \ \ \sec x = \frac{1}{\cos x}$</li>
+</ul>
+<h2>Pythagorean Identities</h2>
+<ul>
+  <li>$\displaystyle\large\sin^{2} x + \cos^{2} x=1$</li>
+  <li>$\displaystyle\large 1 + \tan^{2} x = \sec^{2} x$</li>
+  <li>$\displaystyle\large 1 + \cot^{2} x = \csc^{2} x$</li>
+</ul>
+<h2>Co-function Identities</h2>
+<ul>
+  <li>$\displaystyle\large \sin\Bigg(\frac{\pi}{2}-x\Bigg)=\cos x\ \ \ \ \  \cos\Bigg(\frac{\pi}{2}-x\Bigg) = \sin x$</li>
+  <li>$\displaystyle\large\tan\Bigg(\frac{\pi}{2}-x\Bigg)=\cot x\ \ \ \ \  \cot\Bigg(\frac{\pi}{2}-x\Bigg)= \tan x $</li>
+  <li>$\displaystyle\large\csc x\Bigg(\frac{\pi}{2}-x\Bigg)=\sec x\ \ \ \ \ \sec\Bigg(\frac{\pi}{2}-x\Bigg)= \csc x$</li>
+</ul>
+<h2>Parity Identites(Even & Odd)</h2>
+<ul>
+  <li>$\displaystyle\large \sin(-x)= -\sin x\ \ \ \ \ \cos(-x) = \cos x$</li>
+  <li>$\displaystyle\large \tan(-x)= -\tan x\ \ \ \ \ \cot(-x) = -\cot x$</li>
+  <li>$\displaystyle\large \csc(-x)= -\csc x\ \ \ \ \ \sec(-x) = \sec x$</li>
+</ul>
+<h2>Sum & Difference Formulas</h2>
+<ul>
+  <li>$\displaystyle\large \sin(x\pm y) = \sin x\ \cos y\pm \cos x\ \sin y$</li>
+  <li>$\displaystyle\large \cos(x\pm y)= \cos x\ \cos y\mp \sin x\ \sin y$</li>
+  <li>$\displaystyle\large \tan(x\pm y) = \frac{\tan x \pm \tan y}{1 \mp \tan x \tan y}$</li>
+</ul>
+<h2>Double Angle Formulas</h2>
+<ul>
+  <li>$\displaystyle\large\sin(2x) = 2\sin x\ \cos x$</li>
+  <li>$\displaystyle\large\cos(2x) = \cos^{2} x - sin^{2}x\\ \displaystyle\large = 2 \cos^{2}x - 1\\ \displaystyle\large
+    = 1 - 2\sin^{2}x$</li>
+  <li>$\displaystyle\large \tan(2x) = \frac{2\tan x}{1-\tan^{2} x}$</li>
+</ul>
+<h2>Power-Reducing Formulas</h2>
+<ul>
+  <li>$\displaystyle\large\sin^{2}x = \frac{1-\cos(2x)}{2}$</li>
+  <li>$\displaystyle\large\cos^{2}x = \frac{1+\cos(2x)}{2}$</li>
+  <li>$\displaystyle\large\tan^{2}x = \frac{1-\cos(2x)}{1+cos(2x)}$</li>
+</ul>
+<h2>Sum-to-Product Formulas</h2>
+<ul>
+  <li>$\displaystyle\large \sin x + \sin y = 2\sin\Bigg(\frac{x+y}{2}\Bigg)\cos\Bigg(\frac{x-y}{2}\Bigg)$</li>
+  <li>$\displaystyle\large \sin x - \sin y = 2\cos\Bigg(\frac{x+y}{2}\Bigg)\sin\Bigg(\frac{x-y}{2}\Bigg)$</li>
+  <li>$\displaystyle\large \cos x + \cos y = 2\cos\Bigg(\frac{x+y}{2}\Bigg)\cos\Bigg(\frac{x-y}{2}\Bigg)$</li>
+  <li>$\displaystyle\large \cos x - \cos y = -2\sin\Bigg(\frac{x+y}{2}\Bigg)\sin\Bigg(\frac{x-y}{2}\Bigg)$</li>
+</ul>
+<h3>Product-to-Sum Formulas</h3>
+<ul>
+  <li>$\displaystyle\large\sin x\ \sin y = \frac{1}{2}\Big[\cos(x-y)-\cos(x+y)\Big]$</li>
+  <li>$\displaystyle\large\cos x\ \cos y = \frac{1}{2}\Big[\cos(x-y) + \cos(x+y)\Big]$</li>
+  <li>$\displaystyle\large\sin x\ \cos y = \frac{1}{2}\Big[\sin(x+y) + \sin(x-y)\Big]$</li>
+  <li>$\displaystyle\large\cos x\ \sin y = \frac{1}{2}\Big[\sin(x+y)-\sin(x-y)\Big]$</li>
+</ul>
+  </div>
+{% endblock %}

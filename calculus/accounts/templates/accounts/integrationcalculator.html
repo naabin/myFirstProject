@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+  <form method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit"value="">Check</button>
+
+  </form>
+  <h4>${{q}} \Rightarrow {{ans}}$</h4>
+<div id="{{figure_graph.id}}"></div>
+<script type="text/javascript">
+  var figureId = "{{figure_graph.id}}";
+  var json01 = {{figure_graph.json|safe}};
+  mpld3.draw_figure(figureId,json01);
+</script>
+</div>
+{% endblock %}

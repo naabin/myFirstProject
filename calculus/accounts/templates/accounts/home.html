@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+<h1>This is homepage</h1>
+  {% block head %}
+      <title>Home</title>
+  {% endblock %}
+  <body>
+    {% block body  %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4"><strong>What is calculus?</strong></h1>
+  <p class="lead">
+
+    The fundamental limiting process of calculus are integration and differentition. Isolated instances
+    of these processes of calculs were considered even in antiquity(culminating in the work of Archimedes), However,
+  the systematic development of calculs, started only in the seventeenth century, is usually credited to two great pioneers
+  Newton and Leibinitz. The key to this systematic development is the insight that the two processes of differentition and integration
+  which had been treated separately, are intimately related by being reciprocal to each other. A fair historical assessment of the
+merits cannot attribute the inventon of calculus to sudden unexplainable falshes of genius on the part of one or two individuals.
+Many people, such as Fermat, Galileo and kepler, stimulated by the revolutonary new ideas in science, contributed to foundation of calculus.
+In fact, Newton's teacher, Barrow, was almost in full possesion of the basic insight into the reciprocity between differentition and
+integration,the cornerstone of the systematic calculs of Newton and Leibinitz. Newton has stated the concepts somewhat more clearly;
+on the other hand, Leibinitz's ingenius notation and methods of caclculation are highly suggestive  and remain indispensable.
+The work of these two men immediately stimulated the higher bracnches of analysis including the calculs of varations and theory
+of differential equations, and led to innumerrable applications in science.</p>
+</div>
+
+
+<div class="container-fluid">
+<h1>Derivative</h1>
+<div id="box" class="jxgbox" style="width:1500px;height:500px"></div>
+<script type="text/javascript">
+    var board=JXG.JSXGraph.initBoard('box',{boundingbox:[-20,10,20,-10],axis:true,keepaspectratio:false});
+    p = board.create('point',[0,0],{name:'',size:1})
+    graph = board.create('functiongraph',[function(x){return p.X()* Math.sin(x);}]);
+    function addCurve(board, func, atts) {
+      var f = board.create('functiongraph', [func], atts);
+      return f;
+    }
+    function plot(func, atts) {
+      if (atts==null) {
+        return addCurve(board, func, {strokewidth:2});
+    } else {
+      return addCurve(board, func, atts);
+   }
+ }
+ function f(x) {
+   return p.X()* Math.sin(x);
+ }
+ function z(x){return p.X()*Math.cos(x);}
+ //c = plot(f);
+// Derivative:
+ g = JXG.Math.Numerics.D(f);
+ plot(g,{strokecolor:'red'});
+ var start = -20,end = 20, x = start,step=0.1,
+ turtle = board.create('turtle',[x,f(x)]),turtle1 = board.create('turtle',[x,z(x)]);
+ var moveForward = function(){
+   x += step;
+   if (x > end){
+     return turtle.clearScreen()
+   }
+   turtle.moveTo([x,f(x)]);
+   turtle1.moveTo([x,z(x)]);
+   setTimeout(moveForward,0.5);
+ };
+ turtle.hideTurtle();
+ moveForward();
+
+</script>
+</div>
+</div>
+<div class="container-fluid">
+<h1>Integration</h1>
+<div id="box1" class="jxgbox" style="width:1500px;height:500px"name='or'></div>
+<form>Riemann sum type: <select id="sumtype" onChange="brd.update()">
+<option value='left' selected> left
+<option value='right'> right
+<option value='middle'> middle
+<option value='trapezoidal'> trapezoidal
+<option value='simpson'> simpson
+<option value='lower'> lower
+<option value='upper'> upper
+</select></form>
+<script type="text/javascript">
+    var brd = JXG.JSXGraph.initBoard('box1', {axis:true, boundingbox:[-8,30,20,-30]});
+    var s = brd.create('slider',[[5,10],[8,10],[3,10,500]],{name:'n',snapWidth:1});
+    var a = brd.create('slider',[[5,20],[8,20],[-10,-2,0]],{name:'start'});
+    var b = brd.create('slider',[[5,15],[8,15],[0,10,15]],{name:'end'});
+    var f = function(x){ return 10 * Math.sin(x); };
+    var plot = brd.create('functiongraph',[f,function(){return a.Value();}, function(){return b.Value();}]);
+
+    var os = brd.create('riemannsum',[f,
+    function(){ return s.Value();}, function(){ return document.getElementById('sumtype').value;},
+    function(){return a.Value();},
+    function(){return b.Value();}
+    ],
+    {fillColor:'red', fillOpacity:0.3});
+
+    brd.create('text',
+      [1,35,function(){ return 'Sum='+(JXG.Math.Numerics.riemannsum(f,s.Value(),document.getElementById('sumtype').value,a.Value(),b.Value())).toFixed(4); }]);
+</script>
+</div>
+<style media="screen">
+  h1{
+    text-align: center;
+  }
+</style>
+    {% endblock %}
+<br>
+  </body>

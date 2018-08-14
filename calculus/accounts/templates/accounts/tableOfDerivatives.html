@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="container">
+
+
+<h1>General Fomulas</h1>
+<ul>
+  <li> $\\\displaystyle\large\frac{d}{dx} c  = 0 $</li>
+  <li> $\\\displaystyle\large\frac{d}{dx}\Big[f(x) + g(s)\Big] = f'(x) + g'(x)$</li>
+  <li> $\\\displaystyle\large\frac{d}{dx}\Big[f(x)g(x)\Big] = f'(x)g(x) + f(x)g'(x)$</li>
+  <li> $\\\displaystyle\large\frac{d}{dx}x^{n} = nx^{n-1}\Big[\text{For real numbers n}\Big]$</li>
+  <li> $\\\displaystyle\large\large\frac{d}{dx}cf(x) = cf'(x)$</li>
+  <li> $\\\displaystyle\large\frac{d}{dx}\big[f(x) - g(x)\Big] = f'(x) - g'(x)$</li>
+  <li> $\\\displaystyle\large\frac{d}{dx}\Bigg[\frac{f(x)}{g(x)}\Bigg] = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^{2}}$</li>
+</ul>
+<h1>Trignometric Functions</h1>
+<ul>
+<li> $\\\displaystyle\large\frac{d}{dx}\sin x = \cos x $</li>
+<li> $\\\displaystyle\large\frac{d}{dx}\tan x = \sec^2 x $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \sec x = \sec x\  \tan x $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \cos x = -\sin x $ </li>
+<li> $\\\displaystyle\large\frac{d}{dx} \cot x =-\csc^2 x $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \csc x = -\csc x\  \cot x $</li>
+</ul>
+<h1> Inverse Trignometric Functions</h1>
+<ul>
+<li> $\\\displaystyle\large\frac{d}{dx}\arcsin^{-1} x = \frac{1}{\sqrt{1 - x^{2}}} $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \arccos^{-1} x = - \frac{1}{\sqrt{1-x^{2}}}$ </li>
+<li> $\\\displaystyle\large\frac{d}{dx} \sec^{-1} x = \frac{1}{|x| \sqrt{x^{2}-1}} $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \cot^{-1} x = - \frac{1}{1 + x^{2}}$ </li>
+<li> $\\\displaystyle\large\frac{d}{dx} \csc^{-1} x = - \frac{1}{|x|\sqrt{x^{2}-1}} $</li>
+</ul>
+<h1> Exponential and Logarithmic Functions</h1>
+<ul>
+<li> $\\\displaystyle\large\frac{d}{dx} e^{x} = e^{x} $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} \ln|x| = \frac{1}{x}$</li>
+<li> $\\\displaystyle\large\frac{d}{dx} b^{x} = b^{x} \ln b $</li>
+<li> $\\\displaystyle\large\frac{d}{dx} log_b x = \frac{1}{x\ \ln b}$</li>
+</ul>
+<h1>Hyperbolic Functions</h1>
+<ul>
+<li> $ \\\displaystyle\large\frac{d}{dx} \sinh x = \cosh x $ </li>
+<li>  $ \\\displaystyle\large\frac{d}{dx} \tanh x = sech^{2} x $ </li>
+<li>$ \\\displaystyle\large\frac{d}{dx} sech x = - sech x \ tanh x$ </li>
+<li> $ \\\displaystyle\large\frac{d}{dx} \cosh x = \sinh x $</li>
+<li>$ \\\displaystyle\large\frac{d}{dx} coth x = -csch^{2} x $ </li>
+<li>$ \\\displaystyle\large\frac{d}{dx} csch x = -{csch x} \ {coth x} $ </li>
+</ul>
+<h1> Inverse Hyperbolic Functions </h1>
+<ul>
+<li>$\\\displaystyle\large\frac{d}{dx} \sinh^{-1}x = \frac{1}{\sqrt{x^{2}+ 1}}$</li>
+<li>$\\\displaystyle\large\frac{d}{dx}\tanh^{-1}x = \frac{1}{1-x^{2}}\Big(|x| < 1\Big)$</li>
+<li>$\\\displaystyle\large\frac{d}{dx} sech^{-1}x = - \frac{1}{x\sqrt{1 - x^{2}}} \Big(0 < x < 1\Big)$</li>
+<li>$\\\displaystyle\large\frac{d}{dx} \cosh^{-1}x = \frac{1}{\sqrt{x^{2}-1}}\Big(x > 1\Big)$</li>
+<li>$\\\displaystyle\large\frac{d}{dx} coth^{-1} x = \frac{1}{1-x^{2}}\Big(|x| > 1\Big)$</li>
+<li>$\\\displaystyle\large\frac{d}{dx} csch^{-1}x = - \frac{1}{|x|\sqrt{1 + x^{2}}}\Big(x \ne 0\Big)$</li>
+</ul>
+</div>
+{% endblock %}
